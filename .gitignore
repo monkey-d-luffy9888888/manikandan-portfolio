@@ -12,6 +12,22 @@ dist
 dist-ssr
 *.local
 
+# Other project folders (not part of portfolio)
+ADM-Retail(work)/
+AI_Trading_Extension_Complete (2)/
+RS_PRO angler changor_Consolide_Script/
+docx to pdf convertor/
+dtlp_extension (v.2)/
+excel-auditor-pro (final)/
+ocr-pdf-analyzer-complete (1410)/
+pasternack web scraping without html link_220526/
+Older Resume/
+Project-Cards/
+push-all-repos.ps1
+"images (2).png"
+"college logo.png"
+"Manikandan img.jpeg"
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
