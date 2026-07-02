@@ -16,17 +16,17 @@ const CODE: { tokens: Token[] }[] = [
   { tokens: [{ t: '@', c: '#f97316' }, { t: 'app', c: '#60a5fa' }, { t: '.post(', c: '#e2e8f0' }, { t: '"/extract"', c: '#4ade80' }, { t: ')', c: '#e2e8f0' }] },
   { tokens: [{ t: 'async ', c: '#c084fc' }, { t: 'def ', c: '#c084fc' }, { t: 'extract', c: '#fbbf24' }, { t: '(doc: bytes):', c: '#e2e8f0' }] },
   { tokens: [{ t: '    result ', c: '#e2e8f0' }, { t: '= ', c: '#94a3b8' }, { t: 'model', c: '#38bdf8' }, { t: '.analyze(doc)', c: '#e2e8f0' }] },
-  { tokens: [{ t: '    ', c: '' }, { t: 'return ', c: '#c084fc' }, { t: '{', c: '#e2e8f0' }, { t: '"data"', c: '#4ade80' }, { t: ': result, ', c: '#e2e8f0' }, { t: '"acc"', c: '#4ade80' }, { t: ': ', c: '#e2e8f0' }, { t: '0.992', c: '#fb923c' }, { t: '}', c: '#e2e8f0' }] },
+  { tokens: [{ t: '    ', c: '' }, { t: 'return ', c: '#c084fc' }, { t: '{', c: '#e2e8f0' }, { t: '"data"', c: '#4ade80' }, { t: ': result, ', c: '#e2e8f0' }, { t: '"status"', c: '#4ade80' }, { t: ': ', c: '#e2e8f0' }, { t: '"success"', c: '#4ade80' }, { t: '}', c: '#e2e8f0' }] },
   { tokens: [] },
   { tokens: [{ t: '$ ', c: '#4ade80' }, { t: 'python ', c: '#94a3b8' }, { t: 'pipeline.py', c: '#60a5fa' }] },
-  { tokens: [{ t: '✓ ', c: '#4ade80' }, { t: 'Processing ', c: '#6b7280' }, { t: '10,247', c: '#fbbf24' }, { t: ' products...', c: '#6b7280' }] },
-  { tokens: [{ t: '✓ ', c: '#4ade80' }, { t: 'Accuracy: ', c: '#6b7280' }, { t: '99.2%', c: '#4ade80' }, { t: '  Speed: ', c: '#6b7280' }, { t: '1.8s avg', c: '#4ade80' }] },
+  { tokens: [{ t: '✓ ', c: '#4ade80' }, { t: 'Processing ', c: '#6b7280' }, { t: 'products', c: '#fbbf24' }, { t: '...', c: '#6b7280' }] },
+  { tokens: [{ t: '✓ ', c: '#4ade80' }, { t: 'Extraction ', c: '#6b7280' }, { t: 'complete', c: '#4ade80' }, { t: '  Status: ', c: '#6b7280' }, { t: 'OK', c: '#4ade80' }] },
 ]
 
 const METRICS = [
-  { label: 'Accuracy',   value: '99.2%', icon: '🎯', color: '#4ade80', top: '-18px',  right: '-16px', bottom: 'auto', left: 'auto', delay: 0.6 },
-  { label: 'Avg Speed',  value: '1.8s',  icon: '⚡', color: '#fbbf24', bottom: '55px', right: '-18px', top: 'auto',    left: 'auto', delay: 0.8 },
-  { label: 'Daily Docs', value: '10K+',  icon: '📊', color: '#60a5fa', bottom: '-18px', left: '24px', top: 'auto',    right: 'auto', delay: 1.0 },
+  { label: 'Accuracy',  value: 'High',    icon: '🎯', color: '#4ade80', top: '-18px',  right: '-16px', bottom: 'auto', left: 'auto', delay: 0.6 },
+  { label: 'Status',    value: 'Live',    icon: '⚡', color: '#fbbf24', bottom: '55px', right: '-18px', top: 'auto',    left: 'auto', delay: 0.8 },
+  { label: 'Scale',     value: 'Enterprise', icon: '📊', color: '#60a5fa', bottom: '-18px', left: '24px', top: 'auto',    right: 'auto', delay: 1.0 },
 ]
 
 // ── Animated lines (restart every cycle) ───────────────────────────

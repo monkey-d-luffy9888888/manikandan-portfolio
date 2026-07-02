@@ -73,7 +73,7 @@ export const portfolioData = {
       date: '2024',
       desc: 'AI-powered system for extracting structured product attributes from PDFs and images at enterprise scale.',
       descBullets: [
-        'Processes 10,000+ products daily with 99.2% accuracy',
+        'Processes large volumes of products with high accuracy using multi-LLM verification',
         'Multi-LLM support with AI verification layer',
         'FastAPI backend with Docker deployment on GCP',
       ],
@@ -88,8 +88,8 @@ export const portfolioData = {
       date: '2024',
       desc: 'Intelligent audit system that processes Excel data with AI validation and bulk error detection.',
       descBullets: [
-        'Saves 40+ hours per week for enterprise finance teams',
-        '98% error detection rate on 50K+ row datasets',
+        'Significantly reduces manual review time for enterprise finance teams',
+        'Highly accurate error detection across large Excel datasets',
         'Automated cleaning and report generation',
       ],
       color: '#4A148C',
@@ -103,7 +103,7 @@ export const portfolioData = {
       date: '2023',
       desc: 'Custom fine-tuning pipeline for Google Gemma models on domain-specific datasets with full API deployment.',
       descBullets: [
-        '3x improvement in domain-specific accuracy over base model',
+        'Significant improvement in domain-specific accuracy over base model',
         'LoRA fine-tuning on Google Colab A100 GPU',
         'Deployed to Hugging Face Hub with FastAPI endpoint',
       ],
@@ -118,8 +118,8 @@ export const portfolioData = {
       date: '2023',
       desc: 'Browser extension that extracts and validates product attributes using AI directly in the browser.',
       descBullets: [
-        'Saves 5+ hours daily for e-commerce teams',
-        'Supports 50+ e-commerce websites with 99% schema compliance',
+        'Significantly reduces manual data entry time for e-commerce teams',
+        'Supports a wide range of e-commerce websites with consistent schema compliance',
         'AI-powered extraction with JSON schema validation',
       ],
       color: '#006064',
@@ -148,8 +148,8 @@ export const portfolioData = {
       date: '2023',
       desc: 'Intelligent document processor that extracts data from PDFs and CAD files using OCR and AI.',
       descBullets: [
-        'Processes 500+ engineering documents per hour',
-        '95% CAD region detection accuracy using YOLO',
+        'Processes large volumes of engineering documents efficiently',
+        'High-accuracy CAD region detection using YOLO object detection',
         'Produces structured JSON output for downstream systems',
       ],
       color: '#880E4F',
@@ -221,21 +221,21 @@ export const portfolioData = {
   achievements: [
     {
       title: 'Production AI Systems',
-      desc: 'Shipped 6+ production AI applications processing thousands of requests daily for enterprise clients with 99%+ accuracy.',
+      desc: 'Shipped multiple production AI applications for enterprise clients, handling high-volume requests reliably at scale.',
       tags: ['AI Engineer', 'Production'],
       emoji: '🚀',
       image: '/images/achievement-1.png',
     },
     {
       title: 'LLM Fine-Tuning',
-      desc: 'Successfully fine-tuned Google Gemma model using LoRA achieving 3x better domain accuracy. Deployed on Hugging Face Hub.',
+      desc: 'Successfully fine-tuned Google Gemma using LoRA for significant domain-specific accuracy gains. Deployed on Hugging Face Hub.',
       tags: ['Gemma', 'LoRA', 'Hugging Face'],
       emoji: '🧠',
       image: '/images/achievement-2.png',
     },
     {
       title: 'Enterprise AI Automation',
-      desc: 'Built AI audit automation system saving 40+ hours/week for enterprise finance teams with 98% error detection rate.',
+      desc: 'Built AI audit automation system that significantly reduces manual audit time for enterprise finance teams.',
       tags: ['Automation', 'Enterprise', 'AI'],
       emoji: '🏆',
       image: '/images/achievement-3.png',
