@@ -5,7 +5,7 @@ export const Education = () => {
   const { education } = portfolioData
 
   return (
-    <section style={{ padding: '80px 0', background: 'var(--bg)' }}>
+    <section id="education" style={{ padding: '80px 0', background: 'var(--bg)' }}>
       <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '0 2rem' }}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const PARTICLES = Array.from({ length: 25 }, (_, i) => ({
@@ -57,6 +57,8 @@ const RING_CONFIG = [
 export const LoadingScreen = ({ onDone }: { onDone: () => void }) => {
   const [progress, setProgress] = useState(0)
   const [phase, setPhase] = useState(0) // 0=loading, 1=name reveal, 2=exit
+  const onDoneRef = useRef(onDone)
+  const firedRef = useRef(false)
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -69,12 +71,14 @@ export const LoadingScreen = ({ onDone }: { onDone: () => void }) => {
   }, [])
 
   useEffect(() => {
-    if (progress === 100) {
-      setTimeout(() => setPhase(1), 200)
-      setTimeout(() => setPhase(2), 2400)
-      setTimeout(() => onDone(), 3000)
+    if (progress === 100 && !firedRef.current) {
+      firedRef.current = true
+      const t1 = setTimeout(() => setPhase(1), 200)
+      const t2 = setTimeout(() => setPhase(2), 2400)
+      const t3 = setTimeout(() => onDoneRef.current(), 3000)
+      return () => { clearTimeout(t1); clearTimeout(t2); clearTimeout(t3) }
     }
-  }, [progress, onDone])
+  }, [progress])
 
   const letters = 'Manikandan Santhosh'.split('')
 

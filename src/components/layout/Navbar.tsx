@@ -5,9 +5,9 @@ const navLinks = [
   { label: 'Skills', href: '#skills' },
   { label: 'Work Experiences', href: '#experience' },
   { label: 'Open Source', href: '#opensource' },
-  { label: 'Achievements', href: '#achievements' },
+  { label: 'Education', href: '#education' },
   { label: 'Blogs', href: '#blogs' },
-  { label: 'Resume', href: '#' },
+  { label: 'Resume', href: '/resume.html' },
   { label: 'Contact Me', href: '#contact' },
 ]
 
@@ -58,6 +58,8 @@ export const Navbar = () => {
             <a
               key={link.href}
               href={link.href}
+              target={link.href.startsWith('/') ? '_blank' : undefined}
+              rel={link.href.startsWith('/') ? 'noopener noreferrer' : undefined}
               style={{
                 color: 'var(--text)',
                 textDecoration: 'none',
