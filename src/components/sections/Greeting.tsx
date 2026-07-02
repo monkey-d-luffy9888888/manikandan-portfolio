@@ -53,7 +53,7 @@ const TECH = [
 ]
 
 const AiCoreAnimation = () => (
-  <div style={{ position: 'relative', width: '420px', height: '420px', maxWidth: 'min(420px, 88vw)' }}>
+  <div style={{ position: 'relative', width: 'clamp(280px, 88vw, 420px)', height: 'clamp(280px, 88vw, 420px)' }}>
 
     {/* Dot grid background */}
     <svg style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', opacity: 0.07, pointerEvents: 'none' }}>
@@ -256,12 +256,12 @@ export const Greeting = () => {
   return (
     <section
       id="greeting"
-      style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', padding: '100px 0 60px', background: 'var(--bg)', position: 'relative', overflow: 'hidden' }}
+      style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', padding: 'clamp(80px, 12vw, 100px) 0 60px', background: 'var(--bg)', position: 'relative', overflow: 'hidden' }}
     >
       <HeroBackground />
 
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 2rem', width: '100%', position: 'relative', zIndex: 1 }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }} className="max-md:grid-cols-1">
+        <div className="grid-2col">
 
           {/* Left: text */}
           <motion.div variants={containerVariants} initial="hidden" animate="visible">
@@ -287,7 +287,7 @@ export const Greeting = () => {
             </motion.h1>
 
             <motion.p variants={itemVariants}
-              style={{ fontSize: '1.05rem', color: 'var(--text-secondary)', lineHeight: 1.8, marginBottom: '2rem', maxWidth: '520px', minHeight: '5.4rem' }}
+              style={{ fontSize: '1.05rem', color: 'var(--text-secondary)', lineHeight: 1.8, marginBottom: '2rem', maxWidth: '100%', minHeight: '5.4rem' }}
             >
               {typedText}
               <motion.span

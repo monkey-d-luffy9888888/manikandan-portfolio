@@ -153,7 +153,7 @@ export const Proficiency = () => {
   return (
     <section style={{ padding: '80px 0', background: 'var(--bg-secondary)' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 2rem' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }} className="max-md:grid-cols-1">
+        <div className="grid-2col">
 
           {/* Left: bars (no percentage) */}
           <motion.div

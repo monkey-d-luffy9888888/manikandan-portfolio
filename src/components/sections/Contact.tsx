@@ -20,7 +20,7 @@ export const Contact = () => {
           </p>
         </motion.div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', gap: '4rem', alignItems: 'center' }} className="max-md:grid-cols-1">
+        <div className="grid-contact">
           {/* Left content */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}

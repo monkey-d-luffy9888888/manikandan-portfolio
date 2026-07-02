@@ -15,8 +15,7 @@ export const Achievements = () => {
         </ScrollReveal>
 
         <StaggerContainer
-          style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}
-          className="max-md:grid-cols-1"
+          className="grid-3col"
           stagger={0.1}
         >
           {achievements.map((a, i) => (

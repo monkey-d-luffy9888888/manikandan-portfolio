@@ -43,7 +43,7 @@ export const Navbar = () => {
           href="#greeting"
           style={{
             fontFamily: '"Dancing Script", cursive',
-            fontSize: '1.8rem',
+            fontSize: 'clamp(1.2rem, 5vw, 1.8rem)',
             fontWeight: 700,
             color: 'var(--primary)',
             textDecoration: 'none',

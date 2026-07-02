@@ -16,7 +16,7 @@ export const BigProjects = () => {
         </ScrollReveal>
 
         <StaggerContainer
-          style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '24px' }}
+          className="grid-auto"
           stagger={0.1}
         >
           {bigProjects.map((project, i) => (

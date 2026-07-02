@@ -15,8 +15,7 @@ export const WorkExperience = () => {
         </ScrollReveal>
 
         <StaggerContainer
-          style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}
-          className="max-md:grid-cols-1 max-lg:grid-cols-2"
+          className="grid-3col"
           stagger={0.09}
         >
           {experiences.map((exp, i) => (
