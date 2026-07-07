@@ -3,12 +3,13 @@ import { useTheme } from '@/context/ThemeContext'
 
 const navLinks = [
   { label: 'Skills', href: '#skills' },
-  { label: 'Work Experiences', href: '#experience' },
+  { label: 'Experience', href: '#experience' },
+  { label: 'Projects', href: '#projects' },
   { label: 'Open Source', href: '#opensource' },
   { label: 'Education', href: '#education' },
-  { label: 'Blogs', href: '#blogs' },
+  { label: 'Writing', href: '#blogs' },
   { label: 'Resume', href: '/resume.html' },
-  { label: 'Contact Me', href: '#contact' },
+  { label: 'Contact', href: '#contact' },
 ]
 
 export const Navbar = () => {
@@ -37,23 +38,24 @@ export const Navbar = () => {
         padding: '0 1.5rem',
       }}
     >
-      <div style={{ maxWidth: '1200px', margin: '0 auto', height: '70px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-        {/* Logo */}
+      <div style={{ maxWidth: '1200px', margin: '0 auto', height: '64px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        {/* Logo — Inter instead of Dancing Script */}
         <a
           href="#greeting"
           style={{
-            fontFamily: '"Dancing Script", cursive',
-            fontSize: 'clamp(1.2rem, 5vw, 1.8rem)',
+            fontFamily: '"Inter", -apple-system, sans-serif',
+            fontSize: 'clamp(1rem, 3vw, 1.1rem)',
             fontWeight: 700,
             color: 'var(--primary)',
             textDecoration: 'none',
+            letterSpacing: '-0.01em',
           }}
         >
           Manikandan Santhosh
         </a>
 
         {/* Desktop nav */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }} className="hidden md:flex">
+        <div style={{ display: 'flex', alignItems: 'center', gap: '2px' }} className="hidden md:flex">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -61,16 +63,22 @@ export const Navbar = () => {
               target={link.href.startsWith('/') ? '_blank' : undefined}
               rel={link.href.startsWith('/') ? 'noopener noreferrer' : undefined}
               style={{
-                color: 'var(--text)',
+                color: 'var(--text-secondary)',
                 textDecoration: 'none',
-                fontSize: '0.88rem',
-                fontWeight: 600,
-                padding: '8px 14px',
+                fontSize: '0.82rem',
+                fontWeight: 500,
+                padding: '6px 11px',
                 borderRadius: '6px',
-                transition: 'all 0.2s',
+                transition: 'all 0.15s',
               }}
-              onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--primary)' }}
-              onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--text)' }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.color = 'var(--text)'
+                e.currentTarget.style.background = 'var(--bg-secondary)'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.color = 'var(--text-secondary)'
+                e.currentTarget.style.background = 'transparent'
+              }}
             >
               {link.label}
             </a>
@@ -80,7 +88,7 @@ export const Navbar = () => {
             className="theme-toggle"
             title="Toggle theme"
             aria-label="Toggle dark/light mode"
-            style={{ marginLeft: '12px' }}
+            style={{ marginLeft: '10px' }}
           />
         </div>
 
@@ -89,7 +97,8 @@ export const Navbar = () => {
           <button onClick={toggleTheme} className="theme-toggle" aria-label="Toggle theme" />
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            style={{ background: 'none', border: 'none', color: 'var(--text)', fontSize: '1.5rem', cursor: 'pointer', padding: '4px' }}
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            style={{ background: 'none', border: 'none', color: 'var(--text)', fontSize: '1.4rem', cursor: 'pointer', padding: '4px' }}
           >
             {menuOpen ? '✕' : '☰'}
           </button>
@@ -102,7 +111,7 @@ export const Navbar = () => {
           background: 'var(--nav-bg)',
           backdropFilter: 'blur(12px)',
           borderTop: '1px solid var(--border)',
-          padding: '1rem 1.5rem',
+          padding: '0.75rem 1.5rem 1.25rem',
         }}>
           {navLinks.map((link) => (
             <a
@@ -111,11 +120,11 @@ export const Navbar = () => {
               onClick={() => setMenuOpen(false)}
               style={{
                 display: 'block',
-                color: 'var(--text)',
+                color: 'var(--text-secondary)',
                 textDecoration: 'none',
-                padding: '12px 0',
-                fontSize: '0.95rem',
-                fontWeight: 600,
+                padding: '10px 0',
+                fontSize: '0.9rem',
+                fontWeight: 500,
                 borderBottom: '1px solid var(--border)',
               }}
             >

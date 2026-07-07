@@ -25,8 +25,8 @@ export const OpenSource = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="section-heading">Open Source Projects</h2>
-          <p className="section-subheading">PINNED REPOSITORIES ON GITHUB</p>
+          <h2 className="section-heading">Open Source</h2>
+          <p className="section-subheading">PUBLIC REPOSITORIES ON GITHUB</p>
         </motion.div>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '20px', marginBottom: '2.5rem' }} className="max-md:grid-cols-1">

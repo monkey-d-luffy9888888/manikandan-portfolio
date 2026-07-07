@@ -10,8 +10,8 @@ export const Achievements = () => {
     <section id="achievements" style={{ padding: '80px 0', background: 'var(--bg)' }}>
       <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 2rem' }}>
         <ScrollReveal direction="up">
-          <h2 className="section-heading">Key Production Highlights</h2>
-          <p className="section-subheading">REAL-WORLD AI SYSTEMS I HAVE SHIPPED</p>
+          <h2 className="section-heading">Engineering Highlights</h2>
+          <p className="section-subheading">SPECIFIC TECHNICAL PROBLEMS SOLVED AT PRODUCTION SCALE</p>
         </ScrollReveal>
 
         <StaggerContainer

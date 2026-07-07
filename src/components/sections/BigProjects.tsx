@@ -9,11 +9,11 @@ export const BigProjects = () => {
   const { bigProjects } = portfolioData
 
   return (
-    <section style={{ padding: '80px 0', background: 'var(--bg-secondary)' }}>
+    <section id="projects" style={{ padding: '80px 0', background: 'var(--bg-secondary)' }}>
       <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 2rem' }}>
         <ScrollReveal direction="right">
-          <h2 className="section-heading">Big Projects</h2>
-          <p className="section-subheading">AI SYSTEMS THAT CREATE REAL-WORLD IMPACT</p>
+          <h2 className="section-heading">Projects</h2>
+          <p className="section-subheading">END-TO-END AI SYSTEMS BUILT IN PRODUCTION</p>
         </ScrollReveal>
 
         <StaggerContainer

@@ -263,18 +263,19 @@ export const WhatIDo = () => {
             </div>
 
             {/* Bullet points */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
               {whatIDo.bullets.map((b, i) => (
-                <motion.p
+                <motion.div
                   key={i}
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1, type: 'spring', stiffness: 100 }}
-                  style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: 1.7 }}
+                  style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}
                 >
-                  {b}
-                </motion.p>
+                  <span style={{ color: 'var(--primary)', flexShrink: 0, fontSize: '0.5rem', marginTop: '6px' }}>◆</span>
+                  <span style={{ color: 'var(--text-secondary)', fontSize: '0.92rem', lineHeight: 1.7 }}>{b}</span>
+                </motion.div>
               ))}
             </div>
           </motion.div>

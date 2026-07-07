@@ -12,8 +12,8 @@ export const WorkExperience = () => {
     <section id="experience" style={{ padding: '80px 0', background: 'var(--bg-secondary)' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 2rem' }}>
         <ScrollReveal direction="left">
-          <h2 className="section-heading">Experiences</h2>
-          <p className="section-subheading">AI SYSTEMS I HAVE BUILT FOR REAL CLIENTS</p>
+          <h2 className="section-heading">Experience</h2>
+          <p className="section-subheading">PRODUCTION AI SYSTEMS SHIPPED FOR ENTERPRISE CLIENTS</p>
         </ScrollReveal>
 
         <StaggerContainer
