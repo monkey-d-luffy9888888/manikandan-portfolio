@@ -19,15 +19,44 @@ import { ExperienceDetail } from '@/pages/ExperienceDetail'
 import { motion, AnimatePresence } from 'framer-motion'
 
 function PortfolioApp() {
-  const [loading, setLoading] = useState(true)
+  // Skip loading screen when returning from a detail page (already seen this session)
+  const [loading, setLoading] = useState(() => !sessionStorage.getItem('pf_loaded'))
 
   useEffect(() => {
     document.title = 'Manikandan Santhosh — AI Engineer & Full Stack Developer'
   }, [])
 
+  // Save scroll position when navigating away to a detail page
+  useEffect(() => {
+    return () => {
+      sessionStorage.setItem('pf_scroll', String(window.scrollY))
+    }
+  }, [])
+
+  // Restore scroll position when returning from a detail page
+  useEffect(() => {
+    if (!loading) {
+      const saved = sessionStorage.getItem('pf_scroll')
+      if (saved) {
+        const y = parseInt(saved, 10)
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            window.scrollTo(0, y)
+            sessionStorage.removeItem('pf_scroll')
+          })
+        })
+      }
+    }
+  }, [loading])
+
   return (
     <>
-      <LoadingScreen onDone={() => setLoading(false)} />
+      {loading && (
+        <LoadingScreen onDone={() => {
+          sessionStorage.setItem('pf_loaded', '1')
+          setLoading(false)
+        }} />
+      )}
 
       <AnimatePresence>
         {!loading && (
@@ -35,7 +64,7 @@ function PortfolioApp() {
             key="main"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.4 }}
             style={{ background: 'var(--bg)', color: 'var(--text)', minHeight: '100vh' }}
           >
             <Navbar />

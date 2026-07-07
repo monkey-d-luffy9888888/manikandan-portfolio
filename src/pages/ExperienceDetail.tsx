@@ -1079,7 +1079,7 @@ export const ExperienceDetail = () => {
           style={{ paddingTop: '1rem', borderTop: '1px solid rgba(255,255,255,0.08)' }}
         >
           <button
-            onClick={() => navigate('/')}
+            onClick={() => navigate(-1)}
             style={{
               display: 'inline-flex', alignItems: 'center', gap: '8px',
               background: '#2563eb', color: '#fff',

@@ -1270,7 +1270,7 @@ export const ProjectDetail = () => {
             </a>
           )}
           <button
-            onClick={() => navigate('/')}
+            onClick={() => navigate(-1)}
             style={{
               display: 'inline-flex', alignItems: 'center', gap: '8px',
               background: 'transparent', color: 'var(--text-secondary)',
