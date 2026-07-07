@@ -68,6 +68,7 @@ export const portfolioData = {
 
   experiences: [
     {
+      id: 'enterprise-product-ai',
       role: 'Enterprise Product AI',
       company: 'AI Extraction System',
       date: '2024',
@@ -83,6 +84,7 @@ export const portfolioData = {
       tech: ['Python', 'FastAPI', 'OCR', 'LLMs', 'Docker', 'GCP'],
     },
     {
+      id: 'enterprise-audit-ai',
       role: 'Enterprise Audit AI',
       company: 'Audit Automation System',
       date: '2024',
@@ -98,6 +100,7 @@ export const portfolioData = {
       tech: ['Python', 'OpenPyXL', 'LLMs', 'FastAPI', 'PostgreSQL'],
     },
     {
+      id: 'gemma-fine-tuning',
       role: 'Gemma Fine-Tuning',
       company: 'LLM Pipeline',
       date: '2023',
@@ -113,6 +116,7 @@ export const portfolioData = {
       tech: ['Python', 'Gemma', 'LoRA', 'Hugging Face', 'FastAPI'],
     },
     {
+      id: 'ai-chrome-extension',
       role: 'AI Chrome Extension',
       company: 'Browser AI Tool',
       date: '2023',
@@ -128,6 +132,7 @@ export const portfolioData = {
       tech: ['JavaScript', 'Chrome API', 'LLMs', 'Manifest V3'],
     },
     {
+      id: 'trading-ai-platform',
       role: 'Trading AI Platform',
       company: 'Market Intelligence Tool',
       date: '2023',
@@ -143,6 +148,7 @@ export const portfolioData = {
       tech: ['Python', 'FastAPI', 'React', 'WebSocket', 'AI/ML'],
     },
     {
+      id: 'pdf-cad-ai-extractor',
       role: 'PDF + CAD AI Extractor',
       company: 'Document AI System',
       date: '2023',
@@ -196,6 +202,7 @@ export const portfolioData = {
 
   bigProjects: [
     {
+      id: 'adm-retail-platform',
       name: 'ADM Retail Platform',
       desc: 'Full-stack retail data management platform with AI product enrichment, taxonomy classification, Shopify integration, and AWS pipeline.',
       link: '#',
@@ -203,6 +210,7 @@ export const portfolioData = {
       image: '/images/project-1.png',
     },
     {
+      id: 'dtlp-data-extraction-extension',
       name: 'DTLP Data Extraction Extension',
       desc: 'Chrome extension for AI-powered structured product data extraction using Perplexity sonar-pro and Google Gemini with IndexedDB.',
       link: '#',
@@ -210,6 +218,7 @@ export const portfolioData = {
       image: '/images/project-2.png',
     },
     {
+      id: 'ai-trading-extension',
       name: 'AI Trading Extension',
       desc: 'Chrome extension with Flask backend for real-time candlestick pattern detection and AI trade recommendations using Binance API.',
       link: '#',

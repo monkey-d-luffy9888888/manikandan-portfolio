@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { ThemeProvider } from '@/context/ThemeContext'
 import { Navbar } from '@/components/layout/Navbar'
 import { Greeting } from '@/components/sections/Greeting'
@@ -13,6 +14,8 @@ import { Blogs } from '@/components/sections/Blogs'
 import { Contact } from '@/components/sections/Contact'
 import { Footer } from '@/components/sections/Footer'
 import { LoadingScreen } from '@/components/ui/LoadingScreen'
+import { ProjectDetail } from '@/pages/ProjectDetail'
+import { ExperienceDetail } from '@/pages/ExperienceDetail'
 import { motion, AnimatePresence } from 'framer-motion'
 
 function PortfolioApp() {
@@ -57,7 +60,13 @@ function PortfolioApp() {
 function App() {
   return (
     <ThemeProvider>
-      <PortfolioApp />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<PortfolioApp />} />
+          <Route path="/project/:id" element={<ProjectDetail />} />
+          <Route path="/experience/:id" element={<ExperienceDetail />} />
+        </Routes>
+      </BrowserRouter>
     </ThemeProvider>
   )
 }

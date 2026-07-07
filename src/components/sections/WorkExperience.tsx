@@ -1,5 +1,7 @@
 import { portfolioData } from '@/data/portfolio'
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
+import { ArrowRight } from 'lucide-react'
 import { ScrollReveal, StaggerContainer, StaggerItem } from '@/components/ui/ScrollReveal'
 import { TiltCard } from '@/components/ui/TiltCard'
 
@@ -68,7 +70,7 @@ export const WorkExperience = () => {
                         </li>
                       ))}
                     </ul>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginBottom: '14px' }}>
                       {exp.tech.map((t) => (
                         <span key={t} style={{
                           padding: '3px 10px',
@@ -81,6 +83,22 @@ export const WorkExperience = () => {
                         }}>{t}</span>
                       ))}
                     </div>
+                    {(exp as any).id && (
+                      <Link
+                        to={`/experience/${(exp as any).id}`}
+                        style={{ textDecoration: 'none', alignSelf: 'flex-start' }}
+                      >
+                        <motion.span
+                          className="btn-primary"
+                          style={{ display: 'inline-flex', fontSize: '0.82rem', padding: '9px 18px', cursor: 'pointer' }}
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.97 }}
+                        >
+                          <ArrowRight size={14} />
+                          View Details
+                        </motion.span>
+                      </Link>
+                    )}
                   </div>
                 </motion.div>
               </TiltCard>

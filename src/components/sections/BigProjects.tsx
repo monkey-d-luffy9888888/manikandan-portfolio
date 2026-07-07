@@ -1,6 +1,7 @@
 import { portfolioData } from '@/data/portfolio'
 import { ExternalLink } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import { ScrollReveal, StaggerContainer, StaggerItem } from '@/components/ui/ScrollReveal'
 import { TiltCard } from '@/components/ui/TiltCard'
 
@@ -60,18 +61,20 @@ export const BigProjects = () => {
                     <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: 1.7, marginBottom: '20px', flex: 1 }}>
                       {project.desc}
                     </p>
-                    <motion.a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn-primary"
-                      style={{ display: 'inline-flex', fontSize: '0.85rem', padding: '10px 20px', alignSelf: 'flex-start' }}
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.97 }}
+                    <Link
+                      to={`/project/${(project as any).id}`}
+                      style={{ textDecoration: 'none', alignSelf: 'flex-start' }}
                     >
-                      <ExternalLink size={15} />
-                      Visit Project
-                    </motion.a>
+                      <motion.span
+                        className="btn-primary"
+                        style={{ display: 'inline-flex', fontSize: '0.85rem', padding: '10px 20px', cursor: 'pointer' }}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.97 }}
+                      >
+                        <ExternalLink size={15} />
+                        View Project
+                      </motion.span>
+                    </Link>
                   </div>
                 </motion.div>
               </TiltCard>
